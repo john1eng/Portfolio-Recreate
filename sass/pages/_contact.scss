@@ -1,0 +1,56 @@
+.contact {
+  grid-area: 5/1/6/2;
+  background-color: rgb(122, 112, 216);
+  display: flex;
+  
+  &__detail{
+    flex: 0 0 50%;
+    background-color: royalblue;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__form{
+    flex: 0 0 50%;
+    background-color: teal;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & input, textarea  {
+      padding: .8rem;
+    }
+
+    & textarea{
+      height: 10rem;
+    }
+  }
+
+  &__figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  &__profile-pic{
+    padding: 2rem;
+    max-width: 25rem;
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+
+.social-media {
+  max-width: 25rem;
+  display: flex;
+  justify-content: space-between;
+
+  &__icon{
+    width:3rem;
+  }
+  &__icon:not(:last-child){
+    margin-right: 1rem;
+  }
+}

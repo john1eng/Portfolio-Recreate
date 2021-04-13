@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>John Eng's Portfolio</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <nav class="nav" id="navbar">
+        <div class="nav__logo"></div>
+        <ul class="nav-links">
+          <li class="nav-links__item--active">Home</li>
+          <li class="nav-links__item">About</li>
+          <li class="nav-links__item">Experience</li>
+          <li class="nav-links__item">Contact</li>
+        </ul>
+      </nav>
+      
+      <div class="main">
+        <header class="header" id="header">
+          <div id="header__info">
+            <h1 class="header__heading u-margin-bottom-medium">My name is John Eng. I am a Software Developer</h1>
+            <a href="/" class="btn header__btn">About Me</a>
+          </div>
+        </header>
+
+        <section class="about">
+            <figure class="about__figure">
+              <img src="./picture/profile-img.jpg" alt="profile picture" class="about__profile-img">
+            </figure>
+            <div class="about__intro">Hello, my name is John Eng. I really enjoy developing and learning about websites and applications. I live by challenges and standards of producing great works. I am captured by works that are clean yet sophisticated that touch the core of the project vision and have thoughtful ideas behind them. I see myself as a creative (click the heading), hardworking and responsible person. In addition, I emphasize the importance of these attributes: listen, respect and communicate.</div>
+        </section>
+
+        <section class="resume">
+          <div class="resume__list">
+            <div class="resume__list-item">
+              <div class="resume__field">Skill</div>
+              <div class="resume__details">skill detail</div>
+            </div>
+            <div class="resume__list-item">
+              <div class="resume__field">Experience</div>
+            <div class="resume__details">skill detail</div>
+            </div>
+            <div class="resume__list-item">
+              <div class="resume__field">Education</div>
+              <div class="resume__details">skill detail</div>
+            </div>
+          </div>
+          resume
+        </section>
+
+        <section class="porfolio u-margin-top-medium u-margin-bottom-medium">
+          <div class="porfolio__project-list">  
+            <div class="project">
+                <div class="project__details">
+                  <h3 class="project__heading">Library & Borrow</h3>
+                  <div class="project__icon-list">
+                    <svg class="project__icon">
+                      <use xlink:href="picture/sprite.svg#icon-github"></use>
+                    </svg>
+                    <svg class="project__icon">
+                      <use xlink:href="picture/sprite.svg#icon-browser-window"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="project__video-container">
+                  <video class="project__video" autoplay muted>
+                    <source src="video/Setup - Awesome .mp4">
+                  </video>
+                </div>
+              </div>
+
+              <div class="project">
+                <div class="project__details">
+                  <h3 class="project__heading">Tic Tac & Toe</h3>
+                  <div class="project__icon-list">
+                    <svg class="project__icon">
+                      <use xlink:href="picture/sprite.svg#icon-github"></use>
+                    </svg>
+                    <svg class="project__icon">
+                      <use xlink:href="picture/sprite.svg#icon-browser-window"></use>
+                    </svg>
+                  </div>
+                </div>
+                <figure class="project__figure">
+                  <img class="project__img" src="picture/Restaurant.jpg">
+                </figure>
+              </div>
+
+              <div class="project">
+                <div class="project__details">
+                  <h3 class="project__heading">Rate My Restaurant</h3>
+                  <div class="project__icon-list">
+                    <svg class="project__icon">
+                      <use xlink:href="picture/sprite.svg#icon-github"></use>
+                    </svg>
+                    <svg class="project__icon">
+                      <use xlink:href="picture/sprite.svg#icon-browser-window"></use>
+                    </svg>
+                  </div>
+                </div>
+                <figure class="project__figure">
+                  <img class="project__img" src="picture/Restaurant.jpg">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact u-margin-top-medium u-margin-bottom-medium">
+            <form class="contact__form">
+              <label for="name">
+                <input type="text" name="name" placeholder="Name" class="form__field">
+              </label>
+              <label for="email">
+                <input type="text" name="email" placeholder="Email" class="form__field">
+              </label>
+              <label for="msg">
+                <textarea name="msg" placeholder="Message"></textarea>
+              </label>
+            </form>
+          <div class="contact__detail">
+            <figure class=contact__figure>
+              <img src="picture/profile-img.jpg" alt="" class="contact__profile-pic">
+            </figure>
+            <div class="social-media">
+              <img src="picture/logo-linkedin.svg" class="social-media__icon">
+              <img src="picture/logo-facebook.svg" class="social-media__icon">
+              <img src="picture/logo-github.svg" class="social-media__icon">
+              <img src="picture/mail-outline.svg" class="social-media__icon"></img>
+            </div>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <div class="footer__desc">@2021 by John Eng. All rights reserved.</div>
+        </footer>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="index.js"></script>
+  
+  </body>
+</html>

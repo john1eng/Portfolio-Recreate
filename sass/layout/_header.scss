@@ -1,0 +1,29 @@
+.header {
+  grid-area: 1/1/2/-1;
+  background-color: lightgreen;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(black,0.7),
+    rgba(black, 0.0)), 
+    url(../../picture/laptopAndnotepad.jpg);
+    
+  background-size:cover;
+  background-position: top;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  
+  &__heading {
+    width:35%;
+    margin-left: 5rem;
+    font-size: 3.3rem;
+    color: $color-white;
+  }
+
+  &__btn {
+    margin-left: 5rem;
+    background-color: $color-primary;
+    color: $color-white;
+  }
+}
