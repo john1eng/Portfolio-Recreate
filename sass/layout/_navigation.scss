@@ -1,6 +1,7 @@
 .nav {
   // overflow:hidden;
   // position:fixed;
+  grid-area: 1/1/2/-1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,7 +11,6 @@
   border-bottom: purple;
   
   &__logo {
-    background-color: bisque;
     margin-left: 1.5rem;
     width:50px;
     height:50px;
@@ -34,10 +34,10 @@
 }
 
 .sticky {
-  // position: fixed;
-  // overflow:hidden;
-  // top: 0;
-  // width: inherit;
+  position: fixed;
+  overflow:hidden;
+  top: 0;
+  width: 120rem;
 }
 
 .stickyFix {
