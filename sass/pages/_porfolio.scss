@@ -13,7 +13,7 @@
   display:flex;
   margin-bottom: 2rem;
   &__details{
-    background-color:cadetblue;
+    // background-color:cadetblue;
     flex: 0 0 50%;
     display:flex;
     flex-direction:column;
@@ -21,7 +21,8 @@
     justify-content: center;
   }
   &__heading{
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
   }
   &__video-container{
     flex: 0 0 50%;
@@ -30,20 +31,13 @@
     align-items: center;
   }
   &__video{
-    padding: 3rem;
+    padding: 1.5rem;
     max-width: 35rem;
   }
   &__video:hover{
     filter: brightness(50%)
   }
 
-  &__figure{
-    background-color: pink;
-    flex: 0 0 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   &__img{
     padding: 3rem;
     max-width: 35rem;
@@ -51,11 +45,17 @@
   }
   &__icon-list{
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
   &__icon{
-    width: 4rem;
+    width: 5rem;
+    height: 5rem;
     cursor: pointer;
+  }
 
+  &__icon:not(:last-child){
+    margin-right: 2rem;
   }
 
   &__icon:hover{

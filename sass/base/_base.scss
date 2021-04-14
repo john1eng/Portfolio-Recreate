@@ -12,7 +12,7 @@ html {
 
 body {
   box-sizing: border-box;
-  padding: 3rem;
+  // padding: 3rem;
 
 }
 
@@ -23,7 +23,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 7rem 90vh repeat(6, min-content);
+  grid-template-rows: 7rem 90vh repeat(4, minmax(80vh, min-content)) 8rem;
   grid-template-columns: 120rem;
   max-width: 120rem;
   margin: 2rem auto;

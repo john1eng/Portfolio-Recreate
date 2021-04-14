@@ -9,8 +9,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  box-sizing: border-box;
-  padding: 3rem; }
+  box-sizing: border-box; }
 
 ::selection {
   background-color: #E9896A;
@@ -18,7 +17,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 7rem 90vh repeat(6, min-content);
+  grid-template-rows: 7rem 90vh repeat(4, minmax(80vh, min-content)) 8rem;
   grid-template-columns: 120rem;
   max-width: 120rem;
   margin: 2rem auto; }
@@ -179,39 +178,38 @@ body {
   display: flex;
   margin-bottom: 2rem; }
   .project__details {
-    background-color: cadetblue;
     flex: 0 0 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; }
   .project__heading {
-    font-size: 2rem; }
+    font-size: 2.5rem;
+    margin-bottom: 2rem; }
   .project__video-container {
     flex: 0 0 50%;
     display: flex;
     justify-content: center;
     align-items: center; }
   .project__video {
-    padding: 3rem;
+    padding: 1.5rem;
     max-width: 35rem; }
   .project__video:hover {
     filter: brightness(50%); }
-  .project__figure {
-    background-color: pink;
-    flex: 0 0 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
   .project__img {
     padding: 3rem;
     max-width: 35rem;
     width: 100%; }
   .project__icon-list {
-    display: flex; }
+    display: flex;
+    justify-content: center;
+    align-items: center; }
   .project__icon {
-    width: 4rem;
+    width: 5rem;
+    height: 5rem;
     cursor: pointer; }
+  .project__icon:not(:last-child) {
+    margin-right: 2rem; }
   .project__icon:hover {
     fill: #E9896A; }
 
