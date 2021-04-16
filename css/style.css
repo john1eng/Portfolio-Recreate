@@ -6,10 +6,12 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background-color: pink; }
 
 ::selection {
   background-color: #E9896A;
@@ -17,10 +19,11 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 7rem 90vh repeat(4, minmax(80vh, min-content)) 8rem;
+  grid-template-rows: 7rem 90vh repeat(4, minmax(100vh, min-content)) 8rem;
   grid-template-columns: 120rem;
   max-width: 120rem;
-  margin: 2rem auto; }
+  margin: 2rem auto;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3); }
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -66,12 +69,19 @@ body {
   justify-content: center;
   align-items: flex-start; }
   .header__heading {
-    width: 35%;
+    width: 8ch;
     margin-left: 5rem;
-    font-size: 3.3rem;
+    font-size: 6rem;
+    line-height: 120%;
+    color: #fff; }
+  .header_secondary {
+    width: 20ch;
+    margin-left: 5rem;
+    font-size: 3.2rem;
     color: #fff; }
   .header__btn {
     margin-left: 5rem;
+    margin-top: 5rem;
     background-color: #E9896A;
     color: #fff; }
 
@@ -95,10 +105,14 @@ body {
   margin-right: 1.5rem;
   list-style-type: none;
   background-color: palegoldenrod; }
+  .nav-links__link:link, .nav-links__link:visited {
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase; }
   .nav-links__item {
     padding-left: 2rem; }
     .nav-links__item--active {
-      background-color: blue; }
+      background-color: #87bed8; }
 
 .sticky {
   position: fixed;
@@ -108,22 +122,26 @@ body {
 
 .about {
   grid-area: 3/1/4/2;
-  background-color: pink;
-  display: flex; }
+  background-color: gray;
+  display: flex;
+  padding-top: 7rem;
+  justify-content: center; }
   .about__figure {
-    flex: 0 0 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  .about__profile-img {
     padding: 3rem;
-    max-width: 30rem;
-    width: 100%;
+    display: flex;
+    justify-content: flex-end; }
+  .about__profile-img {
+    max-width: 25rem;
+    align-self: flex-start;
     border-radius: 5px; }
   .about__intro {
-    font-size: 1.6rem;
+    font-size: 2.2rem;
+    line-height: 150%;
+    max-width: 45ch;
     padding: 3rem;
-    flex: 0 0 50%; }
+    padding-right: 6rem;
+    display: flex;
+    color: white; }
 
 .contact {
   grid-area: 6/1/7/2;
@@ -162,9 +180,13 @@ body {
   display: flex;
   justify-content: space-between; }
   .social-media__icon {
-    width: 3rem; }
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer; }
   .social-media__icon:not(:last-child) {
     margin-right: 1rem; }
+  .social-media__icon:hover {
+    fill: #E9896A; }
 
 .porfolio {
   grid-area: 5/1/6/2;
@@ -215,7 +237,34 @@ body {
 
 .resume {
   grid-area: 4/1/5/2;
-  background-color: palevioletred; }
+  min-height: 100vh;
+  color: white;
+  font-size: 1.6rem;
+  background-color: white;
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url(../../picture/web-developer.png);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding-top: 9rem;
+  padding-left: 5rem; }
+  .resume__list-item {
+    display: flex;
+    flex-direction: column; }
+  .resume__field {
+    font-size: 3.2rem;
+    font-weight: bold;
+    text-decoration: underline; }
+
+.skills-detail {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column; }
+  .skills-detail__row {
+    display: flex; }
+  .skills-detail__key {
+    flex-basis: 20%; }
+  .skills-detail__properties {
+    flex-basis: 80%; }
 
 .container {
   background-color: lightblue; }

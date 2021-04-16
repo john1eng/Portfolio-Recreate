@@ -24,11 +24,19 @@
   list-style-type: none;
   background-color: palegoldenrod;
   
+  &__link:link,
+  &__link:visited {
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+  
+  }
+
   &__item{
     padding-left: 2rem;
   
   &--active {
-    background-color: blue;
+    background-color: rgb(135, 190, 216);
   }
   }
 }

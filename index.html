@@ -17,22 +17,39 @@
       <nav class="nav" id="navbar">
         <img class="nav__logo" src="picture/JE-Logo.svg">
         <ul class="nav-links">
-          <li class="nav-links__item--active">Home</li>
-          <li class="nav-links__item">About</li>
-          <li class="nav-links__item">Experience</li>
-          <li class="nav-links__item">Contact</li>
+          <li class="nav-links__item--active">
+            <a href="#home" class="nav-links__link">
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="nav-links__item">
+            <a href="#about" class="nav-links__link">
+              <span>About</span>
+            </a>
+          </li>
+          <li class="nav-links__item"></li>
+            <a href="#experience" class="nav-links__link">
+              <span>experience</span>
+            </a>
+          </li>
+          <li class="nav-links__item"></li>
+            <a href="#contact" class="nav-links__link">
+              <span>contact</span>
+            </a>
+          </li>
         </ul>
       </nav>
-      <header class="header" id="header">
+      <header class="header" id="home">
         <div id="header__info">
-          <h1 class="header__heading u-margin-bottom-medium">
-            My name is John Eng. I am a Software Developer
+          <h1 class="header__heading">
+            John Eng
           </h1>
+          <p class="header_secondary">Web Developer</p>
           <a href="/" class="btn header__btn">About Me</a>
         </div>
       </header>
 
-      <section class="about">
+      <section class="about" id="about">
         <figure class="about__figure">
           <img
             src="./picture/profile-img.jpg"
@@ -41,21 +58,73 @@
           />
         </figure>
         <div class="about__intro">
-          Hello, my name is John Eng. I really enjoy developing and learning
-          about websites and applications. I live by challenges and standards of
-          producing great works. I am captured by works that are clean yet
-          sophisticated that touch the core of the project vision and have
-          thoughtful ideas behind them. I see myself as a creative (click the
-          heading), hardworking and responsible person. In addition, I emphasize
-          the importance of these attributes: listen, respect and communicate.
+          Hello, my name is John Eng. I am a full stack developer especially interested 
+          in front-end development.  I live by the standard of creating 
+          asthetic and beautiful works. I am always seeking ways to learn new ideas to write
+          cleaner code, to implement new methods and to make the application more scalable and optimize.
         </div>
       </section>
-
-      <section class="resume">
+      <!-- Skills
+      Languages:	Java, JavaScript, TypeScript, HTML 5, CSS3, Python, C++
+      Frameworks:	React, Redux, Spring Boot, jQuery, Node.js, Bootstrap,
+      Material UI, Express API, Flask, Axios, Jest
+      IDE:	IntelliJ, Eclipse, Visual Studio Code, Atom
+      Data Base:	PostgreSQL, Hibernate
+      Other Tools:	Photoshop, Google DevTool, Wordpress, GitHub, Postman, Dbeaver, Trello
+      Web Services:	AWS BeanStalk, EC2, RDS, Pipeline, S3
+      Dev Methodology:	Agile-Scum
+      
+      
+      Experience
+      REVATURE (APRIL 20 - PRESENT)
+      ASSOCIATE, Reston, Virginia
+      ● Applied my experience working with React, PostgreSQL, Node.js, and Express.js to build a full-stack application
+      ● Worked with Java to create an API application with Spring Boot framework
+      ● Used Hibernate to automatically map out the database structure
+      ● Collaborated with my team members to implement the Resource Management System application for Revature
+      ● Wrote custom SQL statements to fetch data from RDS
+      ● Utilized AWS CI/CD pipeline to automate the software deployment process
+      ● Worked with React-Redux to manage states in a TypeScript application
+      ● Utilized Git to track changes in the source code and push them to GitHub
+      BREWTOPIA (August 19 - Current)
+      MANAGER + INTERN (PRIOR), Brooklyn, New York
+      ● Implement security practice to PostgreSQL and web application
+      ● Manage two interns in exploring and executing SEO strategies for the company’s sites
+      
+      Google Hackathon (April 19-20 2019)
+      Work with a team of seven to explore the Google AIY to help students with disability in College
+      
+      
+      Education / Certification
+      ORACLE CERTIFIED ASSOCIATE, JAVA SE 8 PROGRAMMER - August 2020
+      CUNY TechWorks - Software Development Program
+      (January 2019 - Current)
+      Have been taking these courses: Intro to Engineering and Technology, Web development, JavaScript, Application Development and C++
+      RevaturePro - Online Development Programs
+      Gained knowledge and experiences in Java, Html/Css, Servlets
+      
+      Khan Academy - Online Courses
+      Completed the Intro to HTML/CSS: Making webspages -->
+      <section class="resume" id="experience">
         <div class="resume__list">
           <div class="resume__list-item">
             <div class="resume__field">Skill</div>
-            <div class="resume__details">skill detail</div>
+            <div class="skills-detail">
+              <div class="skills-detail__row">
+                <div class="skills-detail__key">Languages:</div>
+                <div class="skills-detail__properties">Java, JavaScript, TypeScript, HTML 5, CSS3, Python, C++</div>
+              </div>
+              <div class="skills-detail__row">
+                <div class="skills-detail__key">Frameworks:</div>
+                <div class="skills-detail__properties">React, Redux, Spring Boot, jQuery, Node.js, Bootstrap</div>
+              </div>
+              <div class="skills-detail__key">Languages:</div>
+              <div class="skills-detail__properties">Java, JavaScript, TypeScript, HTML 5, CSS3, Python, C++</div>
+              <div class="skills-detail__key">Languages:</div>
+              <div class="skills-detail__properties">Java, JavaScript, TypeScript, HTML 5, CSS3, Python, C++</div>
+              <div class="skills-detail__key">Languages:</div>
+              <div class="skills-detail__properties">Java, JavaScript, TypeScript, HTML 5, CSS3, Python, C++</div>
+            </div>
           </div>
           <div class="resume__list-item">
             <div class="resume__field">Experience</div>
@@ -68,7 +137,7 @@
         </div>
       </section>
 
-      <section class="porfolio u-margin-top-medium u-margin-bottom-medium">
+      <section class="porfolio">
         <div class="porfolio__project-list">
           <div class="project">
             <div class="project__details">
@@ -135,7 +204,30 @@
         </div>
       </section>
 
-      <section class="contact u-margin-top-medium u-margin-bottom-medium">
+      <section class="contact" id="contact">
+        <div class="contact__detail">
+          <figure class="contact__figure">
+            <img
+              src="picture/profile-img.jpg"
+              alt=""
+              class="contact__profile-pic"
+            />
+          </figure>
+          <div class="social-media">
+            <svg class="social-media__icon">
+              <use xlink:href="picture/sprite.svg#icon-linkedin"></use>
+            </svg>
+            <svg class="social-media__icon">
+              <use xlink:href="picture/sprite.svg#icon-facebook"></use>
+            </svg>
+            <svg class="social-media__icon">
+              <use xlink:href="picture/sprite.svg#icon-github"></use>
+            </svg>
+            <svg class="social-media__icon">
+              <use xlink:href="picture/sprite.svg#icon-envelope"></use>
+            </svg>
+          </div>
+        </div>
         <form class="contact__form">
           <label for="name">
             <input
@@ -157,21 +249,7 @@
             <textarea name="msg" placeholder="Message"></textarea>
           </label>
         </form>
-        <div class="contact__detail">
-          <figure class="contact__figure">
-            <img
-              src="picture/profile-img.jpg"
-              alt=""
-              class="contact__profile-pic"
-            />
-          </figure>
-          <div class="social-media">
-            <img src="picture/logo-linkedin.svg" class="social-media__icon" />
-            <img src="picture/logo-facebook.svg" class="social-media__icon" />
-            <img src="picture/logo-github.svg" class="social-media__icon" />
-            <img src="picture/mail-outline.svg" class="social-media__icon" />
-          </div>
-        </div>
+        
       </section>
 
       <footer class="footer">
