@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="vkziewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;700&display=swap"
@@ -15,9 +15,12 @@
   <body>
     <div class="container">
       <nav class="nav" id="navbar">
-        <img class="nav__logo" src="picture/JE-Logo.svg">
+        <div class="nav__logo-container">
+          <div class="nav__logo"></div>
+          <!-- <img class="nav__logo" src="picture/JE-Logo.svg" /> -->
+        </div>
         <ul class="nav-links">
-          <li class="nav-links__item--active">
+          <li class="nav-links__item">
             <a href="#home" class="nav-links__link">
               <span>Home</span>
             </a>
@@ -27,27 +30,31 @@
               <span>About</span>
             </a>
           </li>
-          <li class="nav-links__item"></li>
-            <a href="#experience" class="nav-links__link">
-              <span>experience</span>
-            </a>
+          <li class="nav-links__item">
+            <div class="dropdown">
+              <a href="#experience" class="nav-links__link dropbtn">
+                <span>experience</span>
+              </a>
+              <div class="dropdown-content">
+                <a href="#experience">Resume</a>
+                <a href="#portfolio">Portfolio</a>
+              </div>
+            </div>
           </li>
-          <li class="nav-links__item"></li>
+          <li class="nav-links__item">
             <a href="#contact" class="nav-links__link">
               <span>contact</span>
             </a>
           </li>
         </ul>
       </nav>
-      <header class="header" id="home">
-        <div id="header__info">
-          <h1 class="header__heading">
-            John Eng
-          </h1>
+      <section class="header" id="home">
+        <div class="header__info">
+          <h1 class="header__heading">John Eng</h1>
           <p class="header_secondary">Web Developer</p>
-          <a href="/" class="btn header__btn">About Me</a>
+          <a href="#about" class="btn header__btn">About Me</a>
         </div>
-      </header>
+      </section>
 
       <section class="about" id="about">
         <figure class="about__figure">
@@ -58,10 +65,11 @@
           />
         </figure>
         <div class="about__intro">
-          Hello, my name is John Eng. I am a full stack developer especially interested 
-          in front-end development.  I live by the standard of creating 
-          asthetic and beautiful works. I am always seeking ways to learn new ideas to write
-          cleaner code, to implement new methods and to make the application more scalable and optimize.
+          Hello, my name is John Eng. I am a full stack developer especially
+          interested in front-end development. I live by the standard of
+          creating asthetic and beautiful works. I am always seeking ways to
+          learn new ideas to write cleaner code, to implement new methods and to
+          make the application more scalable and optimize.
         </div>
       </section>
       <!-- Skills
@@ -105,136 +113,191 @@
       
       Khan Academy - Online Courses
       Completed the Intro to HTML/CSS: Making webspages -->
-      <section class="resume" id="experience">
-        <div class="resume__list">
-          <div class="resume__list-item">
-            <div class="resume__field">Skill</div>
-            <div class="skills-detail">
-              <div class="skills-detail__row">
-                <div class="skills-detail__key">Languages:</div>
-                <div class="skills-detail__properties">Java, JavaScript, TypeScript, HTML 5, CSS3, Python, C++</div>
-              </div>
-              <div class="skills-detail__row">
-                <div class="skills-detail__key">Frameworks:</div>
-                <div class="skills-detail__properties">React, Redux, Spring Boot, jQuery, Node.js, Bootstrap</div>
-              </div>
-              <div class="skills-detail__key">Languages:</div>
-              <div class="skills-detail__properties">Java, JavaScript, TypeScript, HTML 5, CSS3, Python, C++</div>
-              <div class="skills-detail__key">Languages:</div>
-              <div class="skills-detail__properties">Java, JavaScript, TypeScript, HTML 5, CSS3, Python, C++</div>
-              <div class="skills-detail__key">Languages:</div>
-              <div class="skills-detail__properties">Java, JavaScript, TypeScript, HTML 5, CSS3, Python, C++</div>
+      <section class="experience" id="experience">
+        <div class="resume">
+          <div class="resume__list">
+            <div class="resume__list-item">
+              <div class="resume__field">Skill</div>
+              <div class="skills-detail" id="skills-detail"></div>
             </div>
-          </div>
-          <div class="resume__list-item">
-            <div class="resume__field">Experience</div>
-            <div class="resume__details">skill detail</div>
-          </div>
-          <div class="resume__list-item">
-            <div class="resume__field">Education</div>
-            <div class="resume__details">skill detail</div>
+            <div class="resume__list-item">
+              <div class="resume__field">Experience</div>
+              <div class="experience-details" id="experience-detail"></div>
+            </div>
+            <div class="resume__list-item">
+              <div class="resume__field">Education/ Certification</div>
+              <div class="education-details" id="education-detail"></div>
+            </div>
           </div>
         </div>
-      </section>
 
-      <section class="porfolio">
-        <div class="porfolio__project-list">
-          <div class="project">
-            <div class="project__details">
-              <h3 class="project__heading">Borrow & Return</h3>
-              <div class="project__icon-list">
-                <svg class="project__icon">
-                  <use xlink:href="picture/sprite.svg#icon-github"></use>
-                </svg>
-                <svg class="project__icon">
-                  <use
-                    xlink:href="picture/sprite.svg#icon-browser-window"
-                  ></use>
-                </svg>
+        <div class="portfolio" id="portfolio">
+          <div class="portfolio__project-list">
+            <div class="project disable">
+              <div class="project__side project__side--front">
+                <h3 class="project__heading">Borrow & Return</h3>
+                <div class="project__video-container">
+                  <video class="project__video" autoplay muted>
+                    <source src="video/borrow-and-return.mp4" />
+                  </video>
+                  <div class="project__video-overlay"></div>
+                </div>
+                <div class="project__icon-list">
+                  <a
+                    target="_blank"
+                    href="https://github.com/john1eng/BorrowAndReturn"
+                  >
+                    <svg class="project__icon icon-github">
+                      <use xlink:href="picture/sprite.svg#icon-github"></use>
+                    </svg>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://stoic-dijkstra-5f6e0e.netlify.app"
+                  >
+                    <svg class="project__icon icon-browser">
+                      <use
+                        xlink:href="picture/sprite.svg#icon-browser-window"
+                      ></use>
+                    </svg>
+                  </a>
+                  <a>
+                    <svg class="project__icon icon-info">
+                      <use xlink:href="picture/sprite.svg#icon-info"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="project__side project__side--back">
+                <h3>Borrow and Return</h3>
+                Summary: A book shelf where you can add, borrow, sort, and remove books.  
+                A table that collect borrowed books and you can return, remove and sort books.
+                Inspiration: From the Udemy React course to build a hamburger app.
+                Technology Stacks: HTML, CSS, JS, React, Redux, Firebase as database, Netify to deploy
               </div>
             </div>
-            <div class="project__video-container">
-              <video class="project__video" autoplay muted>
-                <source src="video/borrow-and-return.mp4" />
-              </video>
-            </div>
-          </div>
 
-          <div class="project">
-            <div class="project__details">
-              <h3 class="project__heading">Tic Tac & Toe</h3>
-              <div class="project__icon-list">
-                <svg class="project__icon">
-                  <use xlink:href="picture/sprite.svg#icon-github"></use>
-                </svg>
-                <svg class="project__icon">
-                  <use
-                    xlink:href="picture/sprite.svg#icon-browser-window"
-                  ></use>
-                </svg>
+            <div class="project disable">
+              <div class="project__side project__side--front">
+                <h3 class="project__heading">Games: Tic Tac Toe & Hangman</h3>
+                <div class="project__video-container">
+                  <video class="project__video" autoplay muted>
+                    <source src="video/tic-and-hang.mp4" />
+                  </video>
+                  <div class="project__video-overlay"></div>
+                </div>
+                <div class="project__icon-list">
+                  <a
+                    target="_blank"
+                    href="https://github.com/john1eng/combine_game"
+                  >
+                    <svg class="project__icon icon-github">
+                      <use xlink:href="picture/sprite.svg#icon-github"></use>
+                    </svg>
+                  </a>
+                  <a target="_blank" href="https://hangmantictactoe.web.app/">
+                    <svg class="project__icon icon-browser">
+                      <use
+                        xlink:href="picture/sprite.svg#icon-browser-window"
+                      ></use>
+                    </svg>
+                  </a>
+                  <a>
+                    <svg class="project__icon icon-info">
+                      <use xlink:href="picture/sprite.svg#icon-info"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="project__side project__side--back">
+                <h3>Games: Tic Tac Toe and Hangman</h3>
+                Summary: Classic games: Tic Tac Toe and Hangman
+                Inspiration: Assignments from a devement training class to build these games.  
+                Clean and simple design
+                Technology Stacks: HTML, CSS, JS, React, firebase to deploy
               </div>
             </div>
-            <div class="project__video-container">
-              <video class="project__video" autoplay muted>
-                <source src="video/tic-and-hang.mp4" />
-              </video>
-            </div>
-          </div>
 
-          <div class="project">
-            <div class="project__details">
-              <h3 class="project__heading">Rate Your Restaurant</h3>
-              <div class="project__icon-list">
-                <svg class="project__icon">
-                  <use xlink:href="picture/sprite.svg#icon-github"></use>
-                </svg>
-                <svg class="project__icon">
-                  <use
-                    xlink:href="picture/sprite.svg#icon-browser-window"
-                  ></use>
-                </svg>
+            <div class="project disable">
+              <div class="project__side project__side--front">
+                <h3 class="project__heading">Rate Your Restaurant</h3>
+                <div class="project__video-container">
+                  <video class="project__video" autoplay muted>
+                    <source src="video/rate-your-meal.mp4" />
+                  </video>
+                  <div class="project__video-overlay"></div>
+                </div>
+                <div class="project__icon-list">
+                  <a
+                    target="_blank"
+                    href="https://github.com/john1eng/restaurant_J"
+                  >
+                    <svg class="project__icon icon-github">
+                      <use xlink:href="picture/sprite.svg#icon-github"></use>
+                    </svg>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://john1eng.github.io/restaurant_J/"
+                  >
+                    <svg class="project__icon icon-browser">
+                      <use
+                        xlink:href="picture/sprite.svg#icon-browser-window"
+                      ></use>
+                    </svg>
+                  </a>
+                  <a>
+                    <svg class="project__icon icon-info">
+                      <use xlink:href="picture/sprite.svg#icon-info"></use>
+                    </svg>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div class="project__video-container">
-              <video class="project__video" autoplay muted>
-                <source src="video/rate-your-meal.mp4" />
-              </video>
+              <div class="project__side project__side--back">
+                <h3>Rate Your Restaurant</h3>
+                Summary: Restaurant application where you can read and write reviews
+                Inspiration: Group project from a developement class.  I enjoyed creating the logo.
+                Technology Stacks: HTML, CSS, JS, Github to deploy
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <section class="contact" id="contact">
-        <div class="contact__detail">
-          <figure class="contact__figure">
-            <img
-              src="picture/profile-img.jpg"
-              alt=""
-              class="contact__profile-pic"
-            />
-          </figure>
-          <div class="social-media">
+        <div class="contact__title"><h1>Nice to Hear from you!</h1></div>
+
+        <div class="social-media">
+          <a target="_blank" href="https://www.linkedin.com/in/john1eng/">
             <svg class="social-media__icon">
               <use xlink:href="picture/sprite.svg#icon-linkedin"></use>
             </svg>
+          </a>
+          <a target="_blank" href="https://www.facebook.com/john.eng.739">
             <svg class="social-media__icon">
               <use xlink:href="picture/sprite.svg#icon-facebook"></use>
             </svg>
+          </a>
+          <a target="_blank" href="https://github.com/john1eng/">
             <svg class="social-media__icon">
               <use xlink:href="picture/sprite.svg#icon-github"></use>
             </svg>
+          </a>
+          <a target="_blank" href="mailto: john1eng@hotmail.com">
             <svg class="social-media__icon">
               <use xlink:href="picture/sprite.svg#icon-envelope"></use>
             </svg>
-          </div>
+          </a>
         </div>
-        <form class="contact__form">
+
+        <form class="contact__form" autocomplete="off">
           <label for="name">
             <input
               type="text"
               name="name"
               placeholder="Name"
               class="form__field"
+              autocomplete="off"
             />
           </label>
           <label for="email">
@@ -243,13 +306,18 @@
               name="email"
               placeholder="Email"
               class="form__field"
+              autocomplete="off"
             />
           </label>
           <label for="msg">
-            <textarea name="msg" placeholder="Message"></textarea>
+            <textarea
+              name="msg"
+              placeholder="Message"
+              autocomplete="off"
+            ></textarea>
           </label>
+          <button class="btn">Submit</button>
         </form>
-        
       </section>
 
       <footer class="footer">

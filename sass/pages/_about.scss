@@ -1,9 +1,10 @@
 .about {
   grid-area: 3/1/4/2;
-  background-color: gray;
+  background-color: $color-secondary;
   display:flex;
-  padding-top:7rem;
+  // padding-top:7rem;
   justify-content: center;
+  align-items: center;
 
   &__figure {
     padding: 3rem;
