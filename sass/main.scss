@@ -1,4 +1,5 @@
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 @import "base/base";
 @import "base/typography";
@@ -11,8 +12,8 @@
 @import "layout/header";
 @import "layout/navigation";
 
+@import "pages/skip";
 @import "pages/about";
 @import "pages/contact";
 @import "pages/portfolio";
 @import "pages/resume";
-

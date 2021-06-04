@@ -9,25 +9,46 @@
 html {
   font-size: 62.5%; //1rem = 10px; 10px/16px = 62.5%
   scroll-behavior: smooth;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
 }
 
 body {
   box-sizing: border-box;
   background-color: $color-secondary__light;
   // padding: 3rem;
-
 }
 
-::selection{
+::selection {
   background-color: $color-primary;
   color: $color-white;
 }
 
 .container {
   display: grid;
-  grid-template-rows: 7rem 90vh repeat(3, minmax(100vh, min-content)) 8rem;
-  grid-template-columns: 120rem;
+  grid-template-rows: [nav-start] 7rem [nav-end header-start] 90vh [header-end about-start] minmax(100vh, min-content) [about-end resume-start] minmax(100vh, min-content) [resume-end contact-start] minmax(100vh, min-content) [contact-end footer-start] 8rem [footer-end];
+  // grid-template-columns: minmax(100vw, min-content);
   max-width: 120rem;
   margin: 2rem auto;
-  box-shadow: 0 2rem 6rem rgba(0,0,0,.3);
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+
+  @include respond(tab-land) {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
+
+  @include respond(phone) {
+    grid-template-rows:  [header-start] 90vh [header-end about-start] minmax(100vh, min-content) [about-end resume-start] minmax(100vh, min-content) [resume-end contact-start] minmax(100vh, min-content) [contact-end footer-start] 8rem [footer-end];
+  }
+
 }

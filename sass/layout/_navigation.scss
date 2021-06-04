@@ -1,7 +1,7 @@
 .nav {
   // overflow:hidden;
   // position:fixed;
-  grid-area: 1/1/2/-1;
+  grid-area: nav-start/1/nav-end/1;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -10,21 +10,28 @@
   height: 7rem;
   z-index: 10;
 
+  @include respond(phone) {
+    display: none;
+  }
+
   &__logo-container {
     background-color: $color-secondary__darker;
     // height:100%;
     width: 100%;
     display: flex;
     align-items: center;
-    
+
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   &__logo {
     background-image: url(../../picture/SVG/JE-Logo.svg);
     background-repeat: no-repeat;
-    background-position:center;
+    background-position: center;
     background-size: contain;
-    margin-left: 4rem;
+    margin-left: 1rem;
     width: 55px;
     height: 55px;
   }
@@ -32,11 +39,108 @@
   &__logo:hover {
     background-image: url(../../picture/SVG/JE-Logo-yellow.svg);
     background-repeat: no-repeat;
-    background-position:center;
+    background-position: center;
     background-size: contain;
-    margin-left: 4rem;
     width: 55px;
     height: 55px;
+  }
+
+  &__hamburger {
+    display: none;
+
+    @include respond(phone) {
+      display: block;
+    }
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    height: 7rem;
+    width: 7rem;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2000;
+    // box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &__background {
+    height: 6rem;
+    width: 6rem;
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    // background-color: $color-secondary__darker;
+    z-index: 1000;
+    transition: transfrom 0.8s cubic-bezier(0.87, 0, 0.07, 1);
+  }
+
+  &__icon {
+    position: relative;
+    margin-top: 3.5rem;
+
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $color-secondary__darker;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
+    }
+
+    &::before {
+      top: -0.8rem;
+    }
+    &::after {
+      top: 0.8rem;
+    }
+  }
+
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox:checked + &__button &__icon,
+  &__checkbox:checked + &__button &__icon::before,
+  &__checkbox:checked + &__button &__icon::after
+   {
+    background-color: $color-secondary;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+  &__checkbox:checked + &__button:hover &__icon::before {
+    background-color: $color-primary;
+  }
+  &__checkbox:checked + &__button:hover &__icon::after {
+    background-color: $color-primary;
   }
 }
 
@@ -80,7 +184,8 @@
   position: fixed;
   // overflow:hidden;
   top: 0;
-  width: 120rem;
+  width: 100%;
+  max-width: 120rem;
 }
 
 .dropbtn {
@@ -93,47 +198,127 @@
   // overflow: hidden;
 }
 // .dropdown::after{
-  //   content: '';
-  //   width:100%;
-  //   height:100%;
-  //   background-color: rgba(0,0,0,.000001);
-  //   position:absolute;
-  //   left: 0px
-  // }
+//   content: '';
+//   width:100%;
+//   height:100%;
+//   background-color: rgba(0,0,0,.000001);
+//   position:absolute;
+//   left: 0px
+// }
+
+.dropdown-content {
+  background-color: $color-secondary__darker;
+  width: 100%;
+  // box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 0 1rem;
+  display: none;
+  position: absolute;
+  // top:5rem;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-secondary;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  // background-color:blue;
+  color: $color-primary;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.show {
+  display: block;
+}
+
+.activeP {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.nav__hamburger-container{
+  height: 100vh;
+  width: 40%;
+  padding-top: 5rem;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+  background-color: $color-secondary__darker;
+  position: fixed;
+  top: 0;
+  right: -500px;
+  z-index: 1000;
+  transition: right .3s ease-in-out;
+}
+
+.nav__checkbox:checked ~ .nav__hamburger-container{
+  right: 0;
+}
+
+.nav__hamburger_nav-links {
+  font-size: 2.4rem;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  // align-content: center;
+  // align-items: stretch;
+  // background-color: $color-secondary__darker;
   
-  .dropdown-content {
-    background-color: $color-secondary__darker;
-    width: 100%;
-    // box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 0 1rem;
-    display: none;
-    position: absolute;
-    // top:5rem;
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
+  &__link:link,
+  &__link:visited {
+    padding-right: 1rem;
+    padding-left: 1rem;
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
     color: $color-secondary;
-    text-decoration: none;
-    display: block;
   }
   
-  .dropdown-content a:hover {
-    // background-color:blue;
+  &__item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  &__item a span:hover {
     color: $color-primary;
   }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
+}
+
+.nav__hamburger {
+  &__logo-container {
+    background-color: $color-secondary__darker;
+  // height:100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
   }
-  
-  .show {
-    display: block;
+
+  &__logo {
+    background-image: url(../../picture/SVG/JE-Logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-left: 1rem;
+    width: 10rem;
+    height: 10rem;
   }
-  
-  .activeP {
-    background-color: rgba(0, 0, 0, 0.4);
+
+  &__logo:hover {
+    background-image: url(../../picture/SVG/JE-Logo-yellow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 10rem;
+    height: 10rem;
   }
+}

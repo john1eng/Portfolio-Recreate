@@ -1,19 +1,38 @@
 .about {
-  grid-area: 3/1/4/2;
+  grid-area: about-start/1/about-end/1;
   background-color: $color-secondary;
   display:flex;
   // padding-top:7rem;
   justify-content: center;
   align-items: center;
+  
+  &__container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    display:flex;
+
+    @include respond(tab-port) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    @include respond(phone) {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+
+  }
 
   &__figure {
     padding: 3rem;
     display: flex;
     justify-content: flex-end;
+    max-width: 33rem;
   }
 
   &__profile-img {
-    max-width: 25rem;
+    width:100%;
     // height: auto;
     align-self: flex-start;
     border-radius: 5px;
@@ -24,8 +43,13 @@
     line-height: 150%;
     max-width: 45ch;
     padding: 3rem;
-    padding-right: 6rem;
+    // padding-right: 6rem;
     display:flex;
     color: white;
+  
+    @include respond(phone) {
+     padding: 2.5rem;
+    }
   }
+
 }

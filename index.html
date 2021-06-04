@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="vkziewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;700&display=swap"
@@ -13,7 +13,50 @@
     <title>John Eng's Portfolio</title>
   </head>
   <body>
+    <a class="skip-to-content-link" href="#home"> Skip to home </a>
+    <a class="skip-to-content-link" href="#about"> Skip to about </a>
+    <a class="skip-to-content-link" href="#experience"> Skip to experience </a>
+    <a class="skip-to-content-link" href="#contact"> Skip to contact </a>
+    <div class="nav__hamburger">
+      <input type="checkbox" class="nav__checkbox" id="navi-toggle">
+
+      <label for="navi-toggle" class="nav__button">
+        <span class="nav__icon">&nbsp;</span>
+      </label>
+
+      <div class="nav__background">&nbsp;</div>
+
+      <div class="nav__hamburger-container">
+        <ul class="nav__hamburger_nav-links">
+          <li class="nav__hamburger_nav-links__item">
+            <a href="#home" class="nav__hamburger_nav-links__link">
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="nav__hamburger_nav-links__item">
+            <a href="#about" class="nav__hamburger_nav-links__link">
+              <span>About</span>
+            </a>
+          </li>
+          <li class="nav__hamburger_nav-links__item">
+              <a href="#experience" class="nav__hamburger_nav-links__link dropbtn">
+                <span>experience</span>
+              </a>
+          </li>
+          <li class="nav__hamburger_nav-links__item">
+            <a href="#contact" class="nav__hamburger_nav-links__link">
+              <span>contact</span>
+            </a>
+          </li>
+        </ul>
+        <div class="nav__hamburger__logo-container">
+          <div class="nav__hamburger__logo"></div>
+          <!-- <img class="nav__logo" src="picture/JE-Logo.svg" /> -->
+        </div>
+     </div>
+     </div>
     <div class="container">
+      
       <nav class="nav" id="navbar">
         <div class="nav__logo-container">
           <div class="nav__logo"></div>
@@ -57,19 +100,21 @@
       </section>
 
       <section class="about" id="about">
-        <figure class="about__figure">
-          <img
-            src="./picture/profile-img.jpg"
-            alt="profile picture"
-            class="about__profile-img"
-          />
-        </figure>
-        <div class="about__intro">
-          Hello, my name is John Eng. I am a full stack developer especially
-          interested in front-end development. I live by the standard of
-          creating asthetic and beautiful works. I am always seeking ways to
-          learn new ideas to write cleaner code, to implement new methods and to
-          make the application more scalable and optimize.
+        <div class="about__container">
+          <figure class="about__figure">
+            <img
+              src="./picture/profile-img.jpg"
+              alt="profile picture"
+              class="about__profile-img"
+            />
+          </figure>
+          <div class="about__intro">
+            Hello, my name is John Eng. I am a full stack developer especially
+            interested in front-end development. I live by the standard of
+            creating asthetic and beautiful works. I am always seeking ways to
+            learn new ideas to write cleaner code, to implement new methods and to
+            make the application more scalable and optimize.
+          </div>
         </div>
       </section>
       <!-- Skills
@@ -117,17 +162,125 @@
         <div class="resume">
           <div class="resume__list">
             <div class="resume__list-item">
-              <div class="resume__field">Skill</div>
-              <div class="skills-detail" id="skills-detail"></div>
+              <!-- <div class="resume__field">Skill</div>
+              <div class="skills-detail" id="skills-detail"></div> -->
+              <table class="resume__table">
+                <tr>
+                  <td class="resume__left resume__title">SKILLS</td>
+                </tr>
+                <tr class="resume__info">
+                  <td class="resume__left">Languages</td>
+                  <td class="resume__right">
+                    Java, JavaScript, TypeScript, HTML 5, CSS3, Python, C++
+                  </td>
+                </tr>
+                <tr class="resume__info">
+                  <td class="resume__left">Frameworks</td>
+                  <td class="resume__right">
+                    React, Redux, Spring Boot, jQuery, Node.js, Bootstrap,
+                    Material UI, Express API, Flask, Axios, Jest
+                  </td>
+                </tr>
+                <tr class="resume__info">
+                  <td class="resume__left">IDE</td>
+                  <td class="resume__right">
+                    IntelliJ, Eclipse, Visual Studio Code, Atom
+                  </td>
+                </tr>
+                <tr class="resume__info">
+                  <td class="resume__left">Database</td>
+                  <td class="resume__right">PostgreSQL, Hibernate</td>
+                </tr>
+                <tr class="resume__info">
+                  <td class="resume__left">Other Tools</td>
+                  <td class="resume__right">
+                    Photoshop, Google DevTool, Wordpress, GitHub, Postman,
+                    Dbeaver, Trello
+                  </td>
+                </tr>
+                <tr class="resume__info">
+                  <td class="resume__left">Web Services:</td>
+                  <td class="resume__right">
+                    AWS BeanStalk, EC2, RDS, Pipeline, S3
+                  </td>
+                </tr>
+                <tr class="resume__info">
+                  <td class="resume__left">Dev Methodology:</td>
+                  <td class="resume__right">Agile-Scum</td>
+                </tr>
+              </table>
             </div>
+            <hr class="u-margin-top-medium" />
             <div class="resume__list-item">
+              <table class="resume__table">
+                <tr>
+                  <td class="resume__left resume__title">EXPERIENCE</td>
+                </tr>
+                <tr class="resume__info" >
+                  <td class="resume__left">
+                    <span class="resume__content">Revature</span> <br />
+                    Software Developer <br />
+                    April 2020 - present
+                  </td>
+                  <td class="resume__right">
+                      ● Applied my experience working with React, PostgreSQL, Node.js, and Express.js to build a full-stack application<br>
+                      ● Worked with Java to create an API application with Spring Boot framework<br>
+                      ● Used Hibernate to automatically map out the database structure<br>
+                      ● Collaborated with my team members to implement the Resource Management System application for Revature<br>
+                      ● Wrote custom SQL statements to fetch data from RDS<br>
+                      ● Utilized AWS CI/CD pipeline to automate the software deployment process<br>
+                      ● Worked with React-Redux to manage states in a TypeScript application<br>
+                      ● Utilized Git to track changes in the source code and push them to GitHub<br>
+                    </td>
+                  </tr>
+                
+                  <tr class="resume__info">
+                    <td class="resume__left">
+                      <span class="resume__content">CREWASIS</span> <br />
+                      MANAGER + INTERN <br />
+                      Brooklyn, New York <br>
+                      August 19 - Feburary 20
+                    </td>
+                    <td class="resume__right">
+                      ● Implement security practice to PostgreSQL and web application<br>
+                      ● Manage two interns in exploring and executing SEO strategies for the company’s sites<br>
+                    </td>
+                  </tr>                
+              </table>
+            </div>
+            <!-- <div class="resume__list-item">
               <div class="resume__field">Experience</div>
               <div class="experience-details" id="experience-detail"></div>
-            </div>
+            </div> -->
+            <hr class="u-margin-top-medium" />
             <div class="resume__list-item">
+              <!-- <div class="resume__field">Skill</div>
+              <div class="skills-detail" id="skills-detail"></div> -->
+              <table class="resume__table">
+                <tr>
+                  <td class="resume__left resume__title">Education/ Certification</td>
+                </tr>
+                <tr class="resume__info">
+                  <td>
+                    <span class="resume__content">Brooklyn College</span
+                    ><br/>BA in Accounting<br />June 2005
+                  </td>
+                </tr>
+                <tr class="resume__info">
+                  <td>
+                    <span class="resume__content"
+                      >Oracle Certified Associate (OCA)</span
+                    ><br/>
+                    Java SE 8 Programer
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <hr class="u-margin-top-medium" />
+            <!-- <div class="resume__list-item">
               <div class="resume__field">Education/ Certification</div>
               <div class="education-details" id="education-detail"></div>
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -169,11 +322,32 @@
                 </div>
               </div>
               <div class="project__side project__side--back">
-                <h3>Borrow and Return</h3>
-                Summary: A book shelf where you can add, borrow, sort, and remove books.  
-                A table that collect borrowed books and you can return, remove and sort books.
-                Inspiration: From the Udemy React course to build a hamburger app.
-                Technology Stacks: HTML, CSS, JS, React, Redux, Firebase as database, Netify to deploy
+                <h3 class="project__heading">Borrow & Return</h3>
+                <table>
+                  <tr>
+                    <td>Summary:</td>
+                    <td>
+                      A book shelf where you can add, borrow, sort, and remove
+                      books. A table that collect borrowed books and you can
+                      return, remove and sort books. I focused on writing clean
+                      code, functionality, user friendly and minimalist approach
+                      in this app
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Inspiration:</td>
+                    <td>
+                      From the Udemy React course to build a hamburger app.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Technology Stacks:</td>
+                    <td>
+                      HTML, CSS, JS, React, Redux, Firebase as database, Netify
+                      to deploy
+                    </td>
+                  </tr>
+                </table>
               </div>
             </div>
 
@@ -210,11 +384,24 @@
                 </div>
               </div>
               <div class="project__side project__side--back">
-                <h3>Games: Tic Tac Toe and Hangman</h3>
-                Summary: Classic games: Tic Tac Toe and Hangman
-                Inspiration: Assignments from a devement training class to build these games.  
-                Clean and simple design
-                Technology Stacks: HTML, CSS, JS, React, firebase to deploy
+                <h3 class="project__heading">Games: Tic Tac Toe and Hangman</h3>
+                <table>
+                  <tr>
+                    <td>Summary:</td>
+                    <td>Classic games: Tic Tac Toe and Hangman Try it!</td>
+                  </tr>
+                  <tr>
+                    <td>Inspiration:</td>
+                    <td>
+                      Assignments from a development training class to build
+                      these games.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Technology Stacks:</td>
+                    <td>HTML, CSS, JS, React, firebase to deploy</td>
+                  </tr>
+                </table>
               </div>
             </div>
 
@@ -254,10 +441,27 @@
                 </div>
               </div>
               <div class="project__side project__side--back">
-                <h3>Rate Your Restaurant</h3>
-                Summary: Restaurant application where you can read and write reviews
-                Inspiration: Group project from a developement class.  I enjoyed creating the logo.
-                Technology Stacks: HTML, CSS, JS, Github to deploy
+                <h3 class="project__heading">Rate Your Restaurant</h3>
+                <table>
+                  <tr>
+                    <td>Summary:</td>
+                    <td>
+                      Restaurant application where you can read and write
+                      reviews
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Inspiration:</td>
+                    <td>
+                      Group project from a developement class. I enjoyed
+                      creating the logo.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Technology Stacks:</td>
+                    <td>HTML, CSS, JS, Github to deploy</td>
+                  </tr>
+                </table>
               </div>
             </div>
           </div>
@@ -265,7 +469,7 @@
       </section>
 
       <section class="contact" id="contact">
-        <div class="contact__title"><h1>Nice to Hear from you!</h1></div>
+        <div class="contact__title"><h1>Stay In Touch!</h1></div>
 
         <div class="social-media">
           <a target="_blank" href="https://www.linkedin.com/in/john1eng/">
@@ -290,7 +494,12 @@
           </a>
         </div>
 
-        <form class="contact__form" autocomplete="off">
+        <form
+          class="contact__form"
+          autocomplete="off"
+          action="https://getform.io/f/3cf4db28-0e26-433a-97c7-90bae92af867"
+          method="POST"
+        >
           <label for="name">
             <input
               type="text"
@@ -311,12 +520,12 @@
           </label>
           <label for="msg">
             <textarea
-              name="msg"
+              name="message"
               placeholder="Message"
               autocomplete="off"
             ></textarea>
           </label>
-          <button class="btn">Submit</button>
+          <button class="btn" type="submit">Submit</button>
         </form>
       </section>
 
