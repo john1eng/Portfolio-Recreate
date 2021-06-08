@@ -418,7 +418,9 @@ body {
       font-style: italic;
       width: 300px;
       padding: .8rem;
-      margin-bottom: 2rem; }
+      margin-bottom: 2rem;
+      border-radius: 5px;
+      border-style: none; }
     .contact__form textarea {
       height: 10rem; }
     .contact__form input, .contact__form textarea:focus {
@@ -471,8 +473,8 @@ body {
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  width: 50rem;
-  height: 40rem;
+  width: 40rem;
+  height: 42rem;
   position: relative; }
   .project__side {
     flex-grow: 1;
