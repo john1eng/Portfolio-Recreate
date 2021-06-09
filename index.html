@@ -18,7 +18,7 @@
     <a class="skip-to-content-link" href="#experience"> Skip to experience </a>
     <a class="skip-to-content-link" href="#contact"> Skip to contact </a>
     <div class="nav__hamburger">
-      <input type="checkbox" class="nav__checkbox" id="navi-toggle">
+      <input type="checkbox" class="nav__checkbox" id="navi-toggle" />
 
       <label for="navi-toggle" class="nav__button">
         <span class="nav__icon">&nbsp;</span>
@@ -39,14 +39,17 @@
             </a>
           </li>
           <li class="nav__hamburger_nav-links__item">
-              <a href="#experience" class="nav__hamburger_nav-links__link dropbtn">
-                <span>experience</span>
-              </a>
+            <a
+              href="#experience"
+              class="nav__hamburger_nav-links__link dropbtn"
+            >
+              <span>experience</span>
+            </a>
           </li>
           <li class="nav__hamburger_nav-links__item">
-              <a href="#portfolio" class="nav__hamburger_nav-links__link dropbtn">
-                <span>portfolio</span>
-              </a>
+            <a href="#portfolio" class="nav__hamburger_nav-links__link dropbtn">
+              <span>portfolio</span>
+            </a>
           </li>
           <li class="nav__hamburger_nav-links__item">
             <a href="#contact" class="nav__hamburger_nav-links__link">
@@ -58,10 +61,9 @@
           <div class="nav__hamburger__logo"></div>
           <!-- <img class="nav__logo" src="picture/JE-Logo.svg" /> -->
         </div>
-     </div>
-     </div>
+      </div>
+    </div>
     <div class="container">
-      
       <nav class="nav" id="navbar">
         <div class="nav__logo-container">
           <div class="nav__logo"></div>
@@ -84,8 +86,12 @@
                 <span>experience</span>
               </a>
               <div class="dropdown-content">
-                <a href="#experience">Resume</a>
-                <a href="#portfolio">Portfolio</a>
+                <div class="dropdown-content__item">
+                  <a href="#experience">Resume</a>
+                </div>
+                <div class="dropdown-content__item">
+                  <a href="#portfolio">Portfolio</a>
+                </div>
               </div>
             </div>
           </li>
@@ -97,9 +103,9 @@
         </ul>
       </nav>
       <section class="header" id="home">
-        <div class="header__info">
+        <div class="header__info-container">
           <h1 class="header__heading">John Eng</h1>
-          <p class="header_secondary">Web Developer</p>
+          <p class="header__secondary">Web Developer</p>
           <a href="#about" class="btn header__btn">About Me</a>
         </div>
       </section>
@@ -117,8 +123,8 @@
             Hello, my name is John Eng. I am a full stack developer especially
             interested in front-end development. I live by the standard of
             creating asthetic and beautiful works. I am always seeking ways to
-            learn new ideas to write cleaner code, to implement new methods and to
-            make the application more scalable and optimize.
+            learn new ideas to write cleaner code, to implement new methods and
+            to make the application more scalable and optimize.
           </div>
         </div>
       </section>
@@ -221,36 +227,45 @@
                 <tr>
                   <td class="resume__left resume__title">EXPERIENCE</td>
                 </tr>
-                <tr class="resume__info" >
+                <tr class="resume__info">
                   <td class="resume__left">
                     <span class="resume__content">Revature</span> <br />
                     Software Developer <br />
                     April 2020 - present
                   </td>
                   <td class="resume__right">
-                      ● Applied my experience working with React, PostgreSQL, Node.js, and Express.js to build a full-stack application<br>
-                      ● Worked with Java to create an API application with Spring Boot framework<br>
-                      ● Used Hibernate to automatically map out the database structure<br>
-                      ● Collaborated with my team members to implement the Resource Management System application for Revature<br>
-                      ● Wrote custom SQL statements to fetch data from RDS<br>
-                      ● Utilized AWS CI/CD pipeline to automate the software deployment process<br>
-                      ● Worked with React-Redux to manage states in a TypeScript application<br>
-                      ● Utilized Git to track changes in the source code and push them to GitHub<br>
-                    </td>
-                  </tr>
-                
-                  <tr class="resume__info">
-                    <td class="resume__left">
-                      <span class="resume__content">CREWASIS</span> <br />
-                      MANAGER + INTERN <br />
-                      Brooklyn, New York <br>
-                      August 19 - Feburary 20
-                    </td>
-                    <td class="resume__right">
-                      ● Implement security practice to PostgreSQL and web application<br>
-                      ● Manage two interns in exploring and executing SEO strategies for the company’s sites<br>
-                    </td>
-                  </tr>                
+                    ● Applied my experience working with React, PostgreSQL,
+                    Node.js, and Express.js to build a full-stack application<br />
+                    ● Worked with Java to create an API application with Spring
+                    Boot framework<br />
+                    ● Used Hibernate to automatically map out the database
+                    structure<br />
+                    ● Collaborated with my team members to implement the
+                    Resource Management System application for Revature<br />
+                    ● Wrote custom SQL statements to fetch data from RDS<br />
+                    ● Utilized AWS CI/CD pipeline to automate the software
+                    deployment process<br />
+                    ● Worked with React-Redux to manage states in a TypeScript
+                    application<br />
+                    ● Utilized Git to track changes in the source code and push
+                    them to GitHub<br />
+                  </td>
+                </tr>
+
+                <tr class="resume__info">
+                  <td class="resume__left">
+                    <span class="resume__content">CREWASIS</span> <br />
+                    MANAGER + INTERN <br />
+                    Brooklyn, New York <br />
+                    August 19 - Feburary 20
+                  </td>
+                  <td class="resume__right">
+                    ● Implement security practice to PostgreSQL and web
+                    application<br />
+                    ● Manage two interns in exploring and executing SEO
+                    strategies for the company’s sites<br />
+                  </td>
+                </tr>
               </table>
             </div>
             <!-- <div class="resume__list-item">
@@ -263,19 +278,21 @@
               <div class="skills-detail" id="skills-detail"></div> -->
               <table class="resume__table">
                 <tr>
-                  <td class="resume__left resume__title">Education/ Certification</td>
+                  <td class="resume__left resume__title">
+                    Education/ Certification
+                  </td>
                 </tr>
                 <tr class="resume__info">
                   <td>
                     <span class="resume__content">Brooklyn College</span
-                    ><br/>BA in Accounting<br />June 2005
+                    ><br />BA in Accounting<br />June 2005
                   </td>
                 </tr>
                 <tr class="resume__info">
                   <td>
                     <span class="resume__content"
                       >Oracle Certified Associate (OCA)</span
-                    ><br/>
+                    ><br />
                     Java SE 8 Programer
                   </td>
                 </tr>
