@@ -1,7 +1,13 @@
 .experience {
   grid-area: resume-start/1/resume-end/1;
+
   min-height: 100vh;
+  padding-top: 9rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+
   color: white;
+
   background-color: white;
   background-image: linear-gradient(
       to right bottom,
@@ -9,13 +15,8 @@
       rgba(black, 0.6)
     ),
     url(../../picture/web-developer.png);
-
   background-size: 1200px;
   background-position: top;
-  // background-repeat:no-repeat;
-  padding-top: 9rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
 }
 .resume {
   font-size: 1.6rem;

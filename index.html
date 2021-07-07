@@ -17,48 +17,45 @@
     <a class="skip-to-content-link" href="#about"> Skip to about </a>
     <a class="skip-to-content-link" href="#experience"> Skip to experience </a>
     <a class="skip-to-content-link" href="#contact"> Skip to contact </a>
-    <div class="nav__hamburger">
-      <input type="checkbox" class="nav__checkbox" id="navi-toggle" />
+    <div class="nav-hamburger">
+      <input type="checkbox" class="nav-hamburger__checkbox" id="navi-toggle" />
 
-      <label for="navi-toggle" class="nav__button">
-        <span class="nav__icon">&nbsp;</span>
+      <label for="navi-toggle" class="nav-hamburger__button">
+        <span class="nav-hamburger__icon">&nbsp;</span>
       </label>
 
-      <div class="nav__background">&nbsp;</div>
+      <div class="nav-hamburger__background">&nbsp;</div>
 
-      <div class="nav__hamburger-container">
-        <ul class="nav__hamburger_nav-links">
-          <li class="nav__hamburger_nav-links__item">
-            <a href="#home" class="nav__hamburger_nav-links__link">
+      <div class="nav-hamburger__drawer">
+        <ul class="nav-hamburger__list">
+          <li class="nav-hamburger__item">
+            <a href="#home" class="nav-hamburger__link">
               <span>Home</span>
             </a>
           </li>
-          <li class="nav__hamburger_nav-links__item">
-            <a href="#about" class="nav__hamburger_nav-links__link">
+          <li class="nav-hamburger__item">
+            <a href="#about" class="nav-hamburger__link">
               <span>About</span>
             </a>
           </li>
-          <li class="nav__hamburger_nav-links__item">
-            <a
-              href="#experience"
-              class="nav__hamburger_nav-links__link dropbtn"
-            >
+          <li class="nav-hamburger__item">
+            <a href="#experience" class="nav-hamburger__link dropbtn">
               <span>experience</span>
             </a>
           </li>
-          <li class="nav__hamburger_nav-links__item">
-            <a href="#portfolio" class="nav__hamburger_nav-links__link dropbtn">
+          <li class="nav-hamburger__item">
+            <a href="#portfolio" class="nav-hamburger__link dropbtn">
               <span>portfolio</span>
             </a>
           </li>
-          <li class="nav__hamburger_nav-links__item">
-            <a href="#contact" class="nav__hamburger_nav-links__link">
+          <li class="nav-hamburger__item">
+            <a href="#contact" class="nav-hamburger__link">
               <span>contact</span>
             </a>
           </li>
         </ul>
-        <div class="nav__hamburger__logo-container">
-          <div class="nav__hamburger__logo"></div>
+        <div class="nav-hamburger__logo-container">
+          <div class="nav-hamburger__logo"></div>
           <!-- <img class="nav__logo" src="picture/JE-Logo.svg" /> -->
         </div>
       </div>
@@ -87,10 +84,10 @@
               </a>
               <div class="dropdown-content">
                 <div class="dropdown-content__item">
-                  <a href="#experience">Resume</a>
+                  <a class="dropdown-content__link href="#experience">Resume</a>
                 </div>
                 <div class="dropdown-content__item">
-                  <a href="#portfolio">Portfolio</a>
+                  <a  class="dropdown-content__link href="#portfolio">Portfolio</a>
                 </div>
               </div>
             </div>
@@ -486,6 +483,64 @@
                 </table>
               </div>
             </div>
+
+            <div class="project disable">
+              <div class="project__side project__side--front">
+                <h3 class="project__heading">CardTerm</h3>
+                <div class="project__video-container">
+                  <video class="project__video" autoplay muted>
+                    <source src="video/Cardterm.mp4" />
+                  </video>
+                  <div class="project__video-overlay"></div>
+                </div>
+                <div class="project__icon-list">
+                  <a
+                    target="_blank"
+                    href="https://github.com/john1eng/term-frontend"
+                  >
+                    <svg class="project__icon icon-github">
+                      <use xlink:href="picture/sprite.svg#icon-github"></use>
+                    </svg>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://cardterm-1ff8b.web.app/"
+                  >
+                    <svg class="project__icon icon-browser">
+                      <use
+                        xlink:href="picture/sprite.svg#icon-browser-window"
+                      ></use>
+                    </svg>
+                  </a>
+                  <a>
+                    <svg class="project__icon icon-info">
+                      <use xlink:href="picture/sprite.svg#icon-info"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="project__side project__side--back">
+                <h3 class="project__heading">CardTerm</h3>
+                <table>
+                  <tr>
+                    <td>Summary:</td>
+                    <td>
+                      Card application that store the word, definition, examples and sources for the term. Once stored, it can retrieve, update and delete the card. 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Inspiration:</td>
+                    <td>
+                      Want to remember development terms and definition by build a searchable application.  Practice using TrailWind and creating a backend api
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Technology Stacks:</td>
+                    <td>Heroku to deploy backend, Firebase to deploy frontend, TrailWind, React, Express.js</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -493,7 +548,7 @@
       <section class="contact" id="contact">
         <div class="contact__title"><h1>Stay In Touch!</h1></div>
 
-        <div class="social-media">
+        <div class="social-media u-margin-bottom-big">
           <a target="_blank" href="https://www.linkedin.com/in/john1eng/">
             <svg class="social-media__icon">
               <use xlink:href="picture/sprite.svg#icon-linkedin"></use>

@@ -7,21 +7,19 @@
   align-items: center;
   
   &__container {
-    padding-left: 5rem;
-    padding-right: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
     display:flex;
 
     @include respond(tab-port) {
-      padding-left: 1rem;
-      padding-right: 1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
     
     @include respond(phone) {
       flex-direction: column;
       align-items: center;
     }
-    
-
   }
 
   &__figure {
@@ -33,18 +31,15 @@
 
   &__profile-img {
     width:100%;
-    // height: auto;
     align-self: flex-start;
     border-radius: 5px;
-    // display:block;
   }
   &__intro {
+    padding: 3rem;
+    max-width: 45ch;
+
     font-size: 2.2rem;
     line-height: 150%;
-    max-width: 45ch;
-    padding: 3rem;
-    // padding-right: 6rem;
-    display:flex;
     color: white;
   
     @include respond(phone) {

@@ -411,18 +411,18 @@ for (let info of infos) {
   });
 }
 
-const nav_links = document.getElementsByClassName("nav__hamburger_nav-links__link");
+const nav_links = document.getElementsByClassName("nav-hamburger__list__link");
 const navi_toggle = document.getElementById("navi-toggle");
 
-for(let link of nav_links){
+for (let link of nav_links) {
   link.addEventListener("click", () => {
     navi_toggle.click();
-  })
+  });
 }
 
 const container = document.querySelectorAll(".container");
 container[0].addEventListener("click", () => {
-  if(navi_toggle.checked){
+  if (navi_toggle.checked) {
     navi_toggle.click();
   }
-  })
+});

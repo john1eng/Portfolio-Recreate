@@ -1,6 +1,5 @@
 .contact {
   grid-area: contact-start/1/contact-end/1;
-  // background-color: rgb(122, 112, 216);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,9 +7,10 @@
   
   &__title{
     text-align: center;
+    margin-bottom: 2.5rem;
+
     font-size: 3rem;
     font-style: italic;
-    margin-bottom: 2.5rem;
   }
 
   &__form{
@@ -18,13 +18,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
     & input, textarea  {
-      font-size:1.6rem;
-      text-transform: uppercase;
-      font-style: italic;
       width:300px;
-      padding: .8rem;
       margin-bottom: 2rem;
+      
+      padding: .8rem;
+
+      font-size:1.6rem;
+      font-style: italic;
+      
+      text-transform: uppercase;
+
       border-radius:5px;
       border-style: none;
     }
@@ -36,15 +41,17 @@
     & input, textarea:focus  {
       outline-color: $color-primary;
       outline-width: 2px;
-      // border-radius:5px;
     }
 
     & button{
-      font-size: 1.6rem;
-      text-transform: uppercase;
-      background-color: $color-primary;
       padding: 1rem 2.2rem;
+      background-color: $color-primary;
       border-radius: 1rem;
+
+      font-size: 1.6rem;
+
+      text-transform: uppercase;
+
       align-self: flex-end;
       transition: filter .5s ease;
       &:hover{
@@ -54,17 +61,16 @@
 
   }
 
-  &__profile-pic{
-    padding: 2rem;
-    max-width: 25rem;
-    width: 100%;
-    border-radius: 5px;
-  }
+  // &__profile-pic{
+  //   padding: 2rem;
+  //   max-width: 25rem;
+  //   width: 100%;
+  //   border-radius: 5px;
+  // }
 }
 
 .social-media {
   max-width: 25rem;
-  margin-bottom: 6rem;
   display: flex;
   
   
