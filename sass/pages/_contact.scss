@@ -4,8 +4,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color:$color-secondary;
+  background-image: url("../../picture/comment-resized2.png");
+  background-repeat: no-repeat;
+  background-position: center;
   
   &__title{
+    color: $color-light__gray;
+    opacity: .9;
     text-align: center;
     margin-bottom: 2.5rem;
 
@@ -27,6 +33,8 @@
 
       font-size:1.6rem;
       font-style: italic;
+      background-color:$color-light__gray;
+      opacity:.9;
       
       text-transform: uppercase;
 
@@ -75,6 +83,8 @@
   
   
   &__icon{
+    fill:$color-light__gray;
+    opacity:.9;
     width:3rem;
     height: 3rem;
     cursor: pointer;

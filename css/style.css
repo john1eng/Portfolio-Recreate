@@ -36,7 +36,7 @@ html {
 
 body {
   box-sizing: border-box;
-  background-color: #99B5DE; }
+  background-color: lightgray; }
 
 ::selection {
   background-color: #ffdd59;
@@ -89,29 +89,28 @@ body {
 
 .footer {
   grid-area: 6/1/7/1;
-  background-color: #17427D;
+  background-color: #393939;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.6rem;
-  color: #688DC3; }
+  color: #73bccb; }
 
 .header {
   grid-area: header-start/1/header-end/1;
-  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(../../picture/laptopAndnotepad.jpg);
-  background-attachment: fixed;
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url(../../picture/laptop4.jpg);
   background-size: cover;
   background-position: top;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  align-items: center; }
   .header__info-container {
     background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
     border-radius: 2rem;
     width: fit-content;
     width: -moz-fit-content;
     padding: 3rem;
-    margin-left: 5rem;
+    margin-top: 10%;
     color: #fff; }
   .header__heading {
     font-size: 6rem;
@@ -141,7 +140,7 @@ body {
     .nav {
       display: none; } }
   .nav__logo-container {
-    background-color: #17427D;
+    background-color: #393939;
     width: 100%;
     height: 100%;
     display: flex;
@@ -177,9 +176,9 @@ body {
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
-    color: #688DC3; }
+    color: #73bccb; }
   .nav-links__item {
-    background-color: #17427D;
+    background-color: #393939;
     width: 100%;
     display: flex;
     align-items: center;
@@ -204,13 +203,13 @@ body {
   display: none;
   position: absolute;
   width: 100%;
-  background-color: #17427D;
+  background-color: #393939;
   padding: 0 1rem; }
   .dropdown-content__link {
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
-    color: #688DC3; }
+    color: #73bccb; }
   .dropdown-content__item:hover .dropdown-content__link {
     color: #ffdd59; }
 
@@ -254,7 +253,7 @@ body {
     padding-right: 1rem;
     padding-left: 1rem;
     font-weight: bold;
-    color: #688DC3;
+    color: #73bccb;
     text-decoration: none;
     text-transform: uppercase; }
   .nav-hamburger__item {
@@ -269,7 +268,7 @@ body {
     display: flex;
     align-items: center; }
   .nav-hamburger__logo {
-    background-image: url(../../picture/SVG/JE-Logo.svg);
+    background-image: url(../../picture/SVG/JE-Logo-blue.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -326,7 +325,7 @@ body {
   .nav-hamburger__checkbox:checked + .nav-hamburger__button .nav-hamburger__icon,
   .nav-hamburger__checkbox:checked + .nav-hamburger__button .nav-hamburger__icon::before,
   .nav-hamburger__checkbox:checked + .nav-hamburger__button .nav-hamburger__icon::after {
-    background-color: #688DC3; }
+    background-color: #73bccb; }
   .nav-hamburger__checkbox:checked + .nav-hamburger__button .nav-hamburger__icon {
     background-color: transparent; }
   .nav-hamburger__checkbox:checked + .nav-hamburger__button .nav-hamburger__icon::before {
@@ -357,7 +356,7 @@ body {
 
 .about {
   grid-area: about-start/1/about-end/1;
-  background-color: #688DC3;
+  background-color: #73bccb;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -397,8 +396,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  background-color: #73bccb;
+  background-image: url("../../picture/comment-resized2.png");
+  background-repeat: no-repeat;
+  background-position: center; }
   .contact__title {
+    color: lightgray;
+    opacity: .9;
     text-align: center;
     margin-bottom: 2.5rem;
     font-size: 3rem;
@@ -414,6 +419,8 @@ body {
       padding: .8rem;
       font-size: 1.6rem;
       font-style: italic;
+      background-color: lightgray;
+      opacity: .9;
       text-transform: uppercase;
       border-radius: 5px;
       border-style: none; }
@@ -437,6 +444,8 @@ body {
   max-width: 25rem;
   display: flex; }
   .social-media__icon {
+    fill: lightgray;
+    opacity: .9;
     width: 3rem;
     height: 3rem;
     cursor: pointer;
@@ -474,7 +483,7 @@ body {
     height: 100%;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-    background-color: rgba(104, 141, 195, 0.5);
+    background-color: rgba(115, 188, 203, 0.5);
     flex-grow: 1;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -561,8 +570,7 @@ body {
   padding-right: 5rem;
   color: white;
   background-color: white;
-  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(../../picture/web-developer.png);
-  background-size: 1200px;
+  background-image: url(../../picture/oriental-tiles.png);
   background-position: top; }
 
 .resume {
