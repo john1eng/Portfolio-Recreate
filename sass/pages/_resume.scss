@@ -2,19 +2,31 @@
   grid-area: resume-start/1/resume-end/1;
 
   min-height: 100vh;
-  padding-top: 9rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  // padding-top: 9rem;
+  // padding-left: 5rem;
+  // padding-right: 5rem;
 
   color: #e0dede;
 
-  background-color: white;
-  background-image: 
-    url(../../picture/oriental-tiles.png);
-  background-position: top;
+  // background-color: white;
+  // background-image: 
+  //   url(../../picture/oriental-tiles.png);
+  // background-position: top;
 }
 .resume {
+   background-color: $color-primary;
+  color: $color-black;
   font-size: 1.6rem;
+  padding-top: 9rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  
+  &__list{
+    max-width:70rem;
+  }
 
   &__list-item {
     display: flex;
@@ -25,6 +37,7 @@
   &__table {
     border-spacing: 0 15px;
     border-collapse: separate;
+    
   }
 
   &__table tr td {
@@ -37,20 +50,23 @@
     // text-decoration: underline;
   }
   &__title {
+    padding-top: 2.5rem;
     font-size: 2.5rem;
     // font-weight: bold;
     text-transform: uppercase;
     font-style: italic;
+    text-align: center;
   }
   &__content {
-    font-weight: 550;
+
+    font-weight: 450;
     font-size: 2.7rem;
   }
   &__left {
-    width: 40%;
+    width: 30%;
   }
   &__right {
-    width: 50%;
+    width: 60%;
   }
 }
 
@@ -122,5 +138,5 @@
 }
 
 .highlight:hover {
-  color: $color-primary;
+  color: $color-secondary;
 }

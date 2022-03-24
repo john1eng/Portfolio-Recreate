@@ -4,14 +4,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color:$color-secondary;
-  background-image: url("../../picture/comment-resized2.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  
-  &__title{
-    color: $color-light__gray;
-    opacity: .9;
+  background-color: #ffe3dc;
+  // background-image: url("../../picture/comment-resized2.png");
+  // background-repeat: no-repeat;
+  // background-position: center;
+
+  &__title {
+    color: #393939;
+    opacity: 0.9;
     text-align: center;
     margin-bottom: 2.5rem;
 
@@ -19,39 +19,41 @@
     font-style: italic;
   }
 
-  &__form{
-    display:flex;
+  &__form {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    & input, textarea  {
-      width:300px;
-      margin-bottom: 2rem;
-      
-      padding: .8rem;
 
-      font-size:1.6rem;
+    & input,
+    textarea {
+      width: 300px;
+      margin-bottom: 2rem;
+
+      padding: 0.8rem;
+
+      font-size: 1.6rem;
       font-style: italic;
-      background-color:$color-light__gray;
-      opacity:.9;
-      
+      background-color: $color-white;
+      opacity: 0.9;
+
       text-transform: uppercase;
 
-      border-radius:5px;
+      border-radius: 5px;
       border-style: none;
     }
 
-    & textarea{
+    & textarea {
       height: 10rem;
     }
 
-    & input, textarea:focus  {
+    & input,
+    textarea:focus {
       outline-color: $color-primary;
       outline-width: 2px;
     }
 
-    & button{
+    & button {
       padding: 1rem 2.2rem;
       background-color: $color-primary;
       border-radius: 1rem;
@@ -61,12 +63,11 @@
       text-transform: uppercase;
 
       align-self: flex-end;
-      transition: filter .5s ease;
-      &:hover{
-        filter:brightness(80%);
+      transition: filter 0.5s ease;
+      &:hover {
+        filter: brightness(80%);
       }
     }
-
   }
 
   // &__profile-pic{
@@ -80,17 +81,16 @@
 .social-media {
   max-width: 25rem;
   display: flex;
-  
-  
-  &__icon{
-    fill:$color-light__gray;
-    opacity:.9;
-    width:3rem;
+
+  &__icon {
+    fill: #393939;
+    opacity: 0.9;
+    width: 3rem;
     height: 3rem;
     cursor: pointer;
     transition: 0.3s ease-out;
   }
-  & a:not(:last-child){
+  & a:not(:last-child) {
     margin-right: 1rem;
   }
   &__icon:hover {

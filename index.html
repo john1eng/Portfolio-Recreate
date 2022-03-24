@@ -84,10 +84,14 @@
               </a>
               <div class="dropdown-content">
                 <div class="dropdown-content__item">
-                  <a class="dropdown-content__link" href="#experience">Resume</a>
+                  <a class="dropdown-content__link" href="#experience"
+                    >Resume</a
+                  >
                 </div>
                 <div class="dropdown-content__item">
-                  <a class="dropdown-content__link" href="#portfolio">Portfolio</a>
+                  <a class="dropdown-content__link" href="#portfolio"
+                    >Portfolio</a
+                  >
                 </div>
               </div>
             </div>
@@ -172,10 +176,8 @@
             <div class="resume__list-item">
               <!-- <div class="resume__field">Skill</div>
               <div class="skills-detail" id="skills-detail"></div> -->
+              <h2 class="resume__title">SKILLS</h2>
               <table class="resume__table">
-                <tr>
-                  <td class="resume__left resume__title">SKILLS</td>
-                </tr>
                 <tr class="resume__info">
                   <td class="resume__left">Languages</td>
                   <td class="resume__right">
@@ -191,9 +193,7 @@
                 </tr>
                 <tr class="resume__info">
                   <td class="resume__left">IDE</td>
-                  <td class="resume__right">
-                    IntelliJ, Visual Studio Code
-                  </td>
+                  <td class="resume__right">IntelliJ, Visual Studio Code</td>
                 </tr>
                 <tr class="resume__info">
                   <td class="resume__left">Database</td>
@@ -203,13 +203,14 @@
                   <td class="resume__left">Other Tools</td>
                   <td class="resume__right">
                     Photoshop, Google DevTool, Wordpress, GitHub, Postman,
-                    Dbeaver, Trello, Figma, Docker, 
+                    Dbeaver, Trello, Figma, Docker,
                   </td>
                 </tr>
                 <tr class="resume__info">
                   <td class="resume__left">Web Services:</td>
                   <td class="resume__right">
-                    AWS (BeanStalk, EC2, RDS, Pipeline, S3), Netify, Heroku, Firebase
+                    AWS (BeanStalk, EC2, RDS, Pipeline, S3), Netify, Heroku,
+                    Firebase
                   </td>
                 </tr>
                 <tr class="resume__info">
@@ -220,10 +221,8 @@
             </div>
             <hr class="u-margin-top-medium" />
             <div class="resume__list-item">
+              <h2 class="resume__title">EXPERIENCE</h2>
               <table class="resume__table">
-                <tr>
-                  <td class="resume__left resume__title">EXPERIENCE</td>
-                </tr>
                 <tr class="resume__info">
                   <td class="resume__left">
                     <span class="resume__content">Revature</span> <br />
@@ -270,15 +269,11 @@
               <div class="experience-details" id="experience-detail"></div>
             </div> -->
             <hr class="u-margin-top-medium" />
-            <div class="resume__list-item">
+            <div class="resume__list-item .u-margin-bottom-big">
               <!-- <div class="resume__field">Skill</div>
               <div class="skills-detail" id="skills-detail"></div> -->
-              <table class="resume__table">
-                <tr>
-                  <td class="resume__left resume__title">
-                    Education/ Certification
-                  </td>
-                </tr>
+              <h2 class="resume__title">Education/ Certification</h2>
+              <table class="resume__table u-margin-bottom-medium">
                 <tr class="resume__info">
                   <td>
                     <span class="resume__content">Brooklyn College</span
@@ -295,7 +290,7 @@
                 </tr>
               </table>
             </div>
-            <hr class="u-margin-top-medium" />
+            <!-- <hr class="u-margin-top-medium" /> -->
             <!-- <div class="resume__list-item">
               <div class="resume__field">Education/ Certification</div>
               <div class="education-details" id="education-detail"></div>
@@ -305,6 +300,62 @@
 
         <div class="portfolio" id="portfolio">
           <div class="portfolio__project-list">
+            <div class="project disable">
+              <div class="project__side project__side--front">
+                <h3 class="project__heading">Ludo Board Game</h3>
+                <div class="project__video-container">
+                  <video class="project__video" autoplay muted>
+                    <source src="video/Ludo-game.mp4" />
+                  </video>
+                  <div class="project__video-overlay"></div>
+                </div>
+                <div class="project__icon-list">
+                  <a
+                    target="_blank"
+                    href="https://github.com/john1eng/ludo-game"
+                  >
+                    <svg class="project__icon icon-github">
+                      <use xlink:href="picture/sprite.svg#icon-github"></use>
+                    </svg>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://capable-faloodeh-2ab54c.netlify.app"
+                  >
+                    <svg class="project__icon icon-browser">
+                      <use
+                        xlink:href="picture/sprite.svg#icon-browser-window"
+                      ></use>
+                    </svg>
+                  </a>
+                  <a>
+                    <svg class="project__icon icon-info">
+                      <use xlink:href="picture/sprite.svg#icon-info"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="project__side project__side--back">
+                <h3 class="project__heading">Ludo Game</h3>
+                <table>
+                  <tr>
+                    <td>Summary:</td>
+                    <td>Classic board game simulation</td>
+                  </tr>
+                  <tr>
+                    <td>Inspiration:</td>
+                    <td>
+                      Love board games and want to challenge myself to create a
+                      visual games with all the logic in place
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Technology Stacks:</td>
+                    <td>React, Redux, cssTransition</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
             <div class="project disable">
               <div class="project__side project__side--front">
                 <h3 class="project__heading">Borrow & Return</h3>
@@ -479,64 +530,6 @@
                   <tr>
                     <td>Technology Stacks:</td>
                     <td>HTML, CSS, JS, Github to deploy</td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-
-            <div class="project disable">
-              <div class="project__side project__side--front">
-                <h3 class="project__heading">CardTerm</h3>
-                <div class="project__video-container">
-                  <video class="project__video" autoplay muted>
-                    <source src="video/Cardterm.mp4" />
-                  </video>
-                  <div class="project__video-overlay"></div>
-                </div>
-                <div class="project__icon-list">
-                  <a
-                    target="_blank"
-                    href="https://github.com/john1eng/term-frontend"
-                  >
-                    <svg class="project__icon icon-github">
-                      <use xlink:href="picture/sprite.svg#icon-github"></use>
-                    </svg>
-                  </a>
-                  <a
-                    target="_blank"
-                    href="https://cardterm-1ff8b.web.app/"
-                  >
-                    <svg class="project__icon icon-browser">
-                      <use
-                        xlink:href="picture/sprite.svg#icon-browser-window"
-                      ></use>
-                    </svg>
-                  </a>
-                  <a>
-                    <svg class="project__icon icon-info">
-                      <use xlink:href="picture/sprite.svg#icon-info"></use>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="project__side project__side--back">
-                <h3 class="project__heading">CardTerm</h3>
-                <table>
-                  <tr>
-                    <td>Summary:</td>
-                    <td>
-                      Card application that store the word, definition, examples and sources for the term. Once stored, it can retrieve, update and delete the card. 
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Inspiration:</td>
-                    <td>
-                      Want to remember development terms and definition by build a searchable application.  Practice using TrailWind and creating a backend api
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Technology Stacks:</td>
-                    <td>Heroku to deploy backend, Firebase to deploy frontend, TrailWind, React, Express.js</td>
                   </tr>
                 </table>
               </div>

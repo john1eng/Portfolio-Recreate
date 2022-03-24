@@ -1,12 +1,13 @@
 .about {
   grid-area: about-start/1/about-end/1;
-  background-color: $color-secondary;
+  background-color: $color-green;
   display:flex;
   // padding-top:7rem;
   justify-content: center;
   align-items: center;
   
   &__container {
+    border: 5px double $color-secondary;
     margin-left: 5rem;
     margin-right: 5rem;
     display:flex;
@@ -36,11 +37,11 @@
   }
   &__intro {
     padding: 3rem;
-    max-width: 45ch;
+    max-width: 30ch;
 
     font-size: 2.2rem;
     line-height: 150%;
-    color: #444444;
+    color: $color-light__gray;
   
     @include respond(phone) {
      padding: 2.5rem;
