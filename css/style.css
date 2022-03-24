@@ -56,6 +56,10 @@ body {
     .container {
       grid-template-rows: [header-start] 90vh [header-end about-start] minmax(100vh, min-content) [about-end resume-start] minmax(100vh, min-content) [resume-end contact-start] minmax(100vh, min-content) [contact-end footer-start] 8rem [footer-end]; } }
 
+hr {
+  border: 0;
+  border-top: 2px solid black; }
+
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
@@ -459,8 +463,8 @@ body {
 .portfolio {
   background-image: url(../../picture/oriental-tiles.png); }
   .portfolio__project-list {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 9rem;
+    padding-bottom: 9rem;
     min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
@@ -574,13 +578,16 @@ body {
   color: #000;
   font-size: 1.6rem;
   padding-top: 9rem;
+  padding-bottom: 9rem;
   padding-left: 5rem;
   padding-right: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center; }
   .resume__list {
-    max-width: 70rem; }
+    max-width: 75rem;
+    padding: 3rem;
+    border: 5px double #393939; }
   .resume__list-item {
     display: flex;
     flex-direction: column;
@@ -651,7 +658,7 @@ body {
     list-style-position: inside; }
 
 .highlight {
-  transition: color .3s ease-in; }
+  transition: color 0.3s ease-in; }
 
 .highlight:hover {
   color: #73bccb; }

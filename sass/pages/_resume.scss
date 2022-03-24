@@ -9,23 +9,26 @@
   color: #e0dede;
 
   // background-color: white;
-  // background-image: 
+  // background-image:
   //   url(../../picture/oriental-tiles.png);
   // background-position: top;
 }
 .resume {
-   background-color: $color-primary;
+  background-color: $color-primary;
   color: $color-black;
   font-size: 1.6rem;
   padding-top: 9rem;
+  padding-bottom: 9rem;
   padding-left: 5rem;
   padding-right: 5rem;
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  
-  &__list{
-    max-width:70rem;
+
+  &__list {
+    max-width: 75rem;
+    padding: 3rem;
+    border: 5px double $color-dark;
   }
 
   &__list-item {
@@ -37,7 +40,6 @@
   &__table {
     border-spacing: 0 15px;
     border-collapse: separate;
-    
   }
 
   &__table tr td {
@@ -58,7 +60,6 @@
     text-align: center;
   }
   &__content {
-
     font-weight: 450;
     font-size: 2.7rem;
   }
@@ -134,7 +135,7 @@
 }
 
 .highlight {
-  transition: color .3s ease-in;
+  transition: color 0.3s ease-in;
 }
 
 .highlight:hover {
